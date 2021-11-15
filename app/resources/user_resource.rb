@@ -8,6 +8,8 @@ class UserResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :bookmarks
+
   has_many   :reviews,
              foreign_key: :commenter_id
 
