@@ -17,12 +17,20 @@
 
       <dt>Commenter</dt>
       <!-- Display commenter_id start -->
-      <dd><%= review.commenter_id %></dd>
+      <dd>
+        <% if @review.commenter.present? %>
+          <%= link_to review.commenter, review.commenter %>
+        <% end %>
+      </dd>
       <!-- Display commenter_id end -->
 
       <dt>Movie</dt>
       <!-- Display movie_id start -->
-      <dd><%= review.movie_id %></dd>
+      <dd>
+        <% if @review.movie.present? %>
+          <%= link_to review.movie, review.movie %>
+        <% end %>
+      </dd>
       <!-- Display movie_id end -->
 
     </dl>
