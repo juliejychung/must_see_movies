@@ -4,8 +4,8 @@ class Actor < ApplicationRecord
   # Direct associations
 
   has_many   :casts,
-             :class_name => "Role",
-             :dependent => :destroy
+             class_name: "Role",
+             dependent: :destroy
 
   # Indirect associations
 
@@ -16,5 +16,4 @@ class Actor < ApplicationRecord
   def to_s
     image
   end
-
 end

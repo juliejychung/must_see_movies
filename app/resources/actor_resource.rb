@@ -13,5 +13,4 @@ class ActorResource < ApplicationResource
              resource: RoleResource
 
   # Indirect associations
-
 end

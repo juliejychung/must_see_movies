@@ -4,14 +4,14 @@ class Movie < ApplicationRecord
   belongs_to :director
 
   has_many   :ratings,
-             :class_name => "Review",
-             :dependent => :destroy
+             class_name: "Review",
+             dependent: :destroy
 
   has_many   :bookmarks,
-             :dependent => :destroy
+             dependent: :destroy
 
   has_many   :roles,
-             :dependent => :destroy
+             dependent: :destroy
 
   # Indirect associations
 
@@ -22,5 +22,4 @@ class Movie < ApplicationRecord
   def to_s
     title
   end
-
 end
